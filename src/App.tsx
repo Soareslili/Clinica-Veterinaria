@@ -2,6 +2,9 @@ import AboutSection from "./components/About"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Services from "./components/Services"
+import Statistics from "./components/Statistics"
+import Team from "./components/Team"
+import Testimonials from "./components/Testimonials"
 
 
 
@@ -14,6 +17,9 @@ function App() {
       <Hero />
       <Services />
       <AboutSection />
+      <Statistics />
+      <Team />
+      <Testimonials />
     </>
 
   )
