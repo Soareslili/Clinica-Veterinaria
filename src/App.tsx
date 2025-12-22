@@ -1,4 +1,8 @@
 import AboutSection from "./components/About"
+import ContactForm from "./components/ContactForm"
+import FAQ from "./components/FAQ"
+import Footer from "./components/Footer"
+import Gallery from "./components/Gallery"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Services from "./components/Services"
@@ -19,7 +23,11 @@ function App() {
       <AboutSection />
       <Statistics />
       <Team />
+      <Gallery />
       <Testimonials />
+      <FAQ />
+      <ContactForm />
+      <Footer />
     </>
 
   )

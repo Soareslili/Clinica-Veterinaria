@@ -17,28 +17,28 @@ const testimonials = [
     petType: "Golden Retriever",
     petImage: pet1,
     rating: 5,
-    review: "A equipe da Clínica PetCare salvou a vida do meu Max. O atendimento de emergência foi incrível e o tratamento de acompanhamento foi excepcional. Não posso agradecê-los o suficiente por sua dedicação e compaixão.",
-    date: "2 weeks ago"
+    review: "A equipe da Clínica PetCare salvou a vida do meu Max. O atendimento de emergência foi incrível e o tratamento de acompanhamento foi excepcional. Não posso agradecê-los o suficiente por toda a dedicação e compaixão.",
+    date: "há 2 semanas"
   },
   {
     id: 2,
     name: "Michael Chen",
     petName: "Whiskers",
-    petType: "Bengal Cat",
+    petType: "Gato Bengal",
     petImage: pet2,
     rating: 5,
-    review: "Dr. Martinez é incrível com gatos! Bigodes costuma ficar muito nervoso no veterinário, mas toda a equipe a deixou confortável. A clínica é moderna e limpa, altamente recomendada!",
-    date: "1 month ago"
+    review: "A Dra. Martinez é incrível com gatos! O Whiskers costuma ficar muito nervoso no veterinário, mas toda a equipe o deixou confortável. A clínica é moderna e muito limpa. Super recomendo!",
+    date: "há 1 mês"
   },
   {
     id: 3,
     name: "Emily Rodriguez",
     petName: "Charlie",
-    petType: "Labrador Puppy",
+    petType: "Filhote de Labrador",
     petImage: pet3,
     rating: 5,
-    review: "We've been bringing Charlie here since he was 8 weeks old. The vaccination schedule was clearly explained, and the puppy wellness program is fantastic. Best vet clinic in town!",
-    date: "3 weeks ago"
+    review: "Levamos o Charlie nesta clínica desde que ele tinha 8 semanas de vida. O cronograma de vacinação foi explicado com clareza e o programa de acompanhamento para filhotes é fantástico. A melhor clínica veterinária da cidade!",
+    date: "há 3 semanas"
   },
   {
     id: 4,
@@ -47,19 +47,20 @@ const testimonials = [
     petType: "Beagle",
     petImage: pet4,
     rating: 5,
-    review: "Buddy had dental surgery here and the care was outstanding. The staff kept us informed every step of the way and the recovery was smooth. Professional and caring team!",
-    date: "1 week ago"
+    review: "O Buddy fez uma cirurgia dentária aqui e o cuidado foi excepcional. A equipe nos manteve informados em todas as etapas e a recuperação foi tranquila. Um time profissional e muito atencioso!",
+    date: "há 1 semana"
   },
   {
     id: 5,
     name: "Lisa Wang",
     petName: "Luna",
-    petType: "Siamese Cat",
+    petType: "Gata Siamês",
     petImage: pet5,
     rating: 5,
-    review: "Luna needed specialized care for her allergies, and the team here went above and beyond. They worked with us to find the perfect treatment plan. Truly exceptional veterinary care!",
-    date: "2 months ago"
+    review: "A Luna precisava de cuidados especializados para alergias, e a equipe superou todas as expectativas. Trabalharam junto conosco para encontrar o plano de tratamento ideal. Atendimento veterinário realmente excepcional!",
+    date: "há 2 meses"
   }
+
 ];
 
 const Testimonials = () => {
@@ -68,7 +69,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
@@ -95,9 +96,8 @@ const Testimonials = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
-        className={`h-5 w-5 ${
-          i < rating ? "fill-yellow-400 text-yellow-400" : "text-muted"
-        }`}
+        className={`h-5 w-5 ${i < rating ? "fill-yellow-400 text-yellow-400" : "text-muted"
+          }`}
       />
     ));
   };
@@ -107,13 +107,14 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-            Testimonials
+            Depoimento
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-4">
-            What Our Clients Say
+
+            O que nossos clientes dizem
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it - hear from the pet parents who trust us with their beloved companions.
+            Não acredite apenas na nossa palavra - ouça os pais dos animais de estimação que nos confiam seus amados companheiros.
           </p>
         </div>
 
@@ -161,7 +162,8 @@ const Testimonials = () => {
                               {testimonial.name}
                             </p>
                             <p className="text-muted-foreground">
-                              Pet parent of {testimonial.petName} • {testimonial.petType}
+
+                              Pai de estimação de {testimonial.petName} • {testimonial.petType}
                             </p>
                             <p className="text-muted-foreground text-sm mt-1">
                               {testimonial.date}
@@ -178,8 +180,8 @@ const Testimonials = () => {
 
           {/* Navigation Arrows */}
           <a
-           
-           
+
+
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 rounded-full bg-background shadow-lg hover:bg-primary hover:text-primary-foreground transition-colors"
             onClick={goToPrevious}
           >
@@ -188,7 +190,7 @@ const Testimonials = () => {
           </a>
 
           <a
-           
+
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 rounded-full bg-background shadow-lg hover:bg-primary hover:text-primary-foreground transition-colors"
             onClick={goToNext}
           >
@@ -202,11 +204,10 @@ const Testimonials = () => {
               <a
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? "bg-primary w-8"
-                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                }`}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                  ? "bg-primary w-8"
+                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
