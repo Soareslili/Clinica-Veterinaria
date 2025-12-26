@@ -65,6 +65,9 @@ const Gallery = () => {
                             className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer animate-fade-in hover:shadow-xl transition-all duration-300"
                             style={{ animationDelay: `${index * 50}ms` }}
                             onClick={() => openLightbox(index)}
+
+                             data-aos="zoom-in"
+                            data-aos-delay={index * 300}
                         >
                             <img
                                 src={image.src}

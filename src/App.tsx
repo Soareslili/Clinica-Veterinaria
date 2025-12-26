@@ -9,7 +9,7 @@ import Services from "./components/Services"
 import Statistics from "./components/Statistics"
 import Team from "./components/Team"
 import Testimonials from "./components/Testimonials"
-
+import AOSInit from "./components/ui/AOSInit"
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
 
   return (
     <>
+      <AOSInit />
       <Navbar />
       <Hero />
       <Services />

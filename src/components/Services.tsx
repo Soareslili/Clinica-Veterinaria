@@ -37,6 +37,9 @@ const Services = () => {
               key={index} 
               className="group hover:shadow-lg transition-all duration-300 border-border animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
+
+                data-aos="fade-down"
+                data-aos-delay={index * 300}
             >
               <CardContent className="pt-8 pb-6 text-center space-y-4">
                 <div className="mx-auto w-16 h-16 rounded-full bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors">

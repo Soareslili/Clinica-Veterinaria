@@ -21,7 +21,7 @@ const team = [
         name: "Dr. Emma Williams",
         specialty: "Especialista em animais exóticos",
         image: vet3
-    } 
+    }
 ];
 
 const Team = () => {
@@ -43,6 +43,9 @@ const Team = () => {
                             key={index}
                             className="group overflow-hidden border-border hover:shadow-xl transition-all duration-300 animate-fade-in"
                             style={{ animationDelay: `${index * 100}ms` }}
+
+                            data-aos="fade-down"
+                            data-aos-delay={index * 300}
                         >
                             <div className="relative h-80 overflow-hidden">
                                 <img

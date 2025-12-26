@@ -69,7 +69,7 @@ const FAQ = () => {
                                 <AccordionTrigger className="text-left text-foreground hover:text-primary hover:no-underline py-5 text-base font-medium">
                                     {faq.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed ">
                                     {faq.answer}
                                 </AccordionContent>
                             </AccordionItem>
