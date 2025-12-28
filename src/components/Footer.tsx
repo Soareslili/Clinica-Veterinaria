@@ -21,10 +21,10 @@ const Footer = () => {
                             Links rápidos</h3>
                         <ul className="space-y-2 text-sm">
                             <li><a href="#home" className="text-white/70 hover:text-primary transition-colors">Início</a></li>
-                            <li><a href="#services" className="text-white/70 hover:text-primary transition-colors">Sobre Nós</a></li>
+                            <li><a href="#about" className="text-white/70 hover:text-primary transition-colors">Sobre Nós</a></li>
                             <li><a href="#services" className="text-white/70 hover:text-primary transition-colors">Serviços</a></li>
-                            <li><a href="#team" className="text-white/70 hover:text-primary transition-colors">Galeria</a></li>
-                            <li><a href="#services" className="text-white/70 hover:text-primary transition-colors">Depoimento</a></li>
+                            <li><a href="#gallery" className="text-white/70 hover:text-primary transition-colors">Galeria</a></li>
+                            <li><a href="#testimonials" className="text-white/70 hover:text-primary transition-colors">Depoimento</a></li>
                             <li><a href="#contact" className="text-white/70 hover:text-primary transition-colors">Contato</a></li>
                         </ul>
                     </div>
